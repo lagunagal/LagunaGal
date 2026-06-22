@@ -1,0 +1,403 @@
+/* --- 2000s COLOR PALETTE --- */
+:root {
+    --hot-pink: #ff66b2;
+    --light-pink: #ffccdf;
+    --bg-pink: #ffe6f0;
+    --teal: #00cccc;
+    --light-teal: #99ffff;
+    --purple: #b266ff;
+    --white: #ffffff;
+}
+
+/* --- BASE STYLES --- */
+body {
+    background-color: var(--bg-pink);
+    /* Later we can add a subtle tiled star or sparkle background image here */
+    font-family: "Comic Sans MS", "Chalkboard SE", sans-serif; 
+    color: #333;
+    margin: 0;
+    padding: 10px;
+    cursor: crosshair; 
+}
+
+/* --- THE MARQUEE --- */
+.sparkle-text {
+    color: var(--white);
+    background-color: var(--hot-pink);
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 5px;
+    border: 2px dashed var(--white);
+    margin-bottom: 10px;
+}
+
+/* --- MAIN WRAPPER --- */
+.web-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: var(--white);
+    border: 4px solid var(--hot-pink);
+}
+
+/* --- BANNER --- */
+.main-banner {
+    background: linear-gradient(to right, var(--hot-pink), var(--purple));
+    color: var(--white);
+    text-align: center;
+    padding: 30px 10px;
+    border-bottom: 3px solid var(--teal);
+}
+
+.main-banner h1 {
+    font-size: 3rem;
+    margin: 0;
+    text-shadow: 2px 2px var(--teal), -1px -1px var(--purple);
+}
+
+.main-banner p {
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* --- TEAL NAVIGATION --- */
+.teal-nav {
+    background-color: var(--teal);
+    display: flex;
+    justify-content: center;
+    border-bottom: 4px solid var(--hot-pink);
+}
+
+.teal-nav a {
+    display: inline-block;
+    padding: 10px 20px;
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+    border-right: 2px dashed var(--light-teal);
+    border-left: 2px dashed var(--light-teal);
+}
+
+.teal-nav a:hover {
+    background-color: var(--light-teal);
+    color: var(--hot-pink);
+}
+
+/* --- LAYOUT: SIDEBAR & MAIN CONTENT --- */
+.page-layout {
+    display: flex;
+}
+
+/* Left Sidebar */
+.sidebar {
+    width: 200px;
+    background-color: var(--light-pink);
+    border-right: 3px solid var(--hot-pink);
+    padding: 15px;
+}
+
+.sidebar-box {
+    background-color: var(--white);
+    border: 2px dashed var(--purple);
+    padding: 10px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.sidebar-box h3 {
+    color: var(--teal);
+    margin-top: 0;
+    border-bottom: 1px dotted var(--hot-pink);
+}
+
+.blinkie-placeholder {
+    background-color: var(--hot-pink);
+    color: white;
+    text-align: center;
+    border: 2px solid white;
+    padding: 5px;
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Main Content Area */
+.content-area {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.page-section {
+    margin-bottom: 40px;
+}
+
+h2 {
+    color: var(--teal);
+    text-shadow: 1px 1px var(--hot-pink);
+    border-bottom: 2px dashed var(--light-pink);
+    padding-bottom: 5px;
+}
+
+/* --- BUTTONS --- */
+.center-btn {
+    text-align: center;
+}
+
+.action-btn {
+    display: inline-block;
+    background-color: var(--hot-pink);
+    color: var(--white);
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border: 3px outset var(--light-pink);
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.action-btn:active {
+    border: 3px inset var(--light-pink);
+    background-color: var(--teal);
+}
+
+/* --- CATALOG PHOTO COLLAGE --- */
+.catalog-photo-board {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px 18px;
+    min-height: 410px;
+    margin-top: 20px;
+    padding: 10px 0;
+}
+
+.photo-fallback {
+    display: block;
+    width: 100%;
+    min-height: 410px;
+    position: relative;
+}
+
+.catalog-photo-board.has-photos {
+    justify-content: space-around;
+}
+
+.catalog-photo-board.has-photos .photo-fallback {
+    display: none;
+}
+
+.catalog-photo-frame {
+    display: inline-block;
+    padding: 7px;
+    background: var(--white);
+    border: 2px solid var(--teal);
+    box-shadow: 3px 3px 0 var(--hot-pink);
+    transform: rotate(var(--tilt, 0deg)) translateY(var(--lift, 0));
+}
+
+.catalog-photo-frame:nth-child(3n) {
+    box-shadow: 3px 3px 0 var(--purple);
+}
+
+.catalog-photo-frame img {
+    display: block;
+    width: auto;
+    max-width: var(--photo-width, 170px);
+    max-height: 255px;
+    height: auto;
+}
+
+.catalog-photo-frame.wide img {
+    max-width: var(--photo-width, 210px);
+}
+
+.catalog-photo-frame.tall img {
+    max-width: var(--photo-width, 135px);
+    max-height: 285px;
+}
+
+.catalog-photo-frame.square img {
+    max-width: var(--photo-width, 165px);
+}
+
+.photo-placeholder {
+    position: absolute;
+    background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.5), transparent 40%),
+        repeating-linear-gradient(
+            -45deg,
+            var(--light-teal),
+            var(--light-teal) 10px,
+            #d7ffff 10px,
+            #d7ffff 20px
+        );
+    border: 6px solid var(--white);
+    box-shadow: 3px 3px 0 var(--hot-pink);
+    outline: 2px solid var(--teal);
+}
+
+.photo-one {
+    width: 145px;
+    height: 145px;
+    top: 12px;
+    left: 12px;
+    transform: rotate(-8deg);
+}
+
+.photo-two {
+    width: 170px;
+    height: 125px;
+    top: 36px;
+    left: 190px;
+    transform: rotate(5deg);
+    background-color: var(--light-pink);
+}
+
+.photo-three {
+    width: 132px;
+    height: 178px;
+    top: 0;
+    right: 22px;
+    transform: rotate(-4deg);
+}
+
+.photo-four {
+    width: 185px;
+    height: 150px;
+    top: 190px;
+    left: 62px;
+    transform: rotate(6deg);
+}
+
+.photo-five {
+    width: 125px;
+    height: 125px;
+    top: 218px;
+    left: 286px;
+    transform: rotate(-10deg);
+    background-color: var(--light-pink);
+}
+
+.photo-six {
+    width: 155px;
+    height: 115px;
+    top: 262px;
+    right: 42px;
+    transform: rotate(8deg);
+}
+
+.photo-seven {
+    width: 102px;
+    height: 102px;
+    top: 146px;
+    left: 392px;
+    transform: rotate(12deg);
+    box-shadow: 3px 3px 0 var(--purple);
+}
+
+.catalog-link {
+    margin-top: 10px;
+}
+
+.instagram-btn {
+    background-color: var(--purple);
+    border-color: var(--light-teal);
+    box-shadow: 2px 2px 0 var(--teal);
+}
+
+.instagram-btn:hover {
+    background-color: var(--teal);
+    color: var(--white);
+}
+
+/* --- CUSTOM FORM --- */
+.retro-form {
+    background-color: var(--bg-pink);
+    border: 2px dashed var(--teal);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.retro-form input[type="text"],
+.retro-form input[type="email"],
+.retro-form select,
+.retro-form textarea {
+    padding: 5px;
+    border: 2px solid var(--purple);
+    font-family: inherit;
+    background-color: var(--white);
+}
+
+.retro-form textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+
+.checkboxes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    background-color: var(--white);
+    padding: 10px;
+    border: 1px solid var(--light-pink);
+}
+
+@media (max-width: 760px) {
+    .page-layout {
+        display: block;
+    }
+
+    .sidebar {
+        width: auto;
+        border-right: 0;
+        border-bottom: 3px solid var(--hot-pink);
+    }
+
+    .main-banner h1 {
+        font-size: 2.2rem;
+    }
+
+    .teal-nav {
+        flex-wrap: wrap;
+    }
+
+    .catalog-photo-board {
+        gap: 16px;
+        min-height: 0;
+    }
+
+    .photo-fallback {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 16px;
+        min-height: 0;
+    }
+
+    .photo-placeholder {
+        position: static;
+        flex: 0 0 auto;
+    }
+
+    .photo-one,
+    .photo-two,
+    .photo-three,
+    .photo-four,
+    .photo-five,
+    .photo-six,
+    .photo-seven {
+        max-width: 42%;
+    }
+
+    .catalog-photo-frame img,
+    .catalog-photo-frame.wide img,
+    .catalog-photo-frame.tall img,
+    .catalog-photo-frame.square img {
+        max-width: min(var(--photo-width, 150px), 42vw);
+        max-height: 240px;
+    }
+}

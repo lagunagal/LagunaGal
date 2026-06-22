@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laguna gal ~*~ Custom Bras</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="catalog.js" defer></script>
+</head>
+<body>
+
+    <!-- Classic Y2K Scrolling Text -->
+    <marquee class="sparkle-text">💖 ~*~ Welcome to Laguna gal ~*~ 💖</marquee>
+
+    <div class="web-wrapper">
+        
+        <!-- Big Graphic Banner -->
+        <header class="main-banner">
+            <h1>🌸 Laguna gal 🌸</h1>
+            <p>Custom Bras</p>
+        </header>
+
+        <!-- Teal Blocky Navigation (Like Dollz Mania) -->
+        <nav class="teal-nav">
+            <a href="#welcome">Home</a>
+            <a href="#catalog">Catalog</a>
+            <a href="#custom">Custom Order</a>
+        </nav>
+
+        <!-- The Classic 2-Column Layout -->
+        <div class="page-layout">
+            
+            <!-- Left Sidebar -->
+            <aside class="sidebar">
+                <div class="sidebar-box">
+                    <h3>Updates!</h3>
+                    <p>Event coming up: 75 E Broadway #:203C
+new York New York July 7th and 10th
+1-7 pm</p>
+                </div>
+                <div class="sidebar-box">
+                    <h3>Status</h3>
+                    <p>Orders: <b>OPEN</b></p>
+                </div>
+                <!-- Placeholders for classic 2000s blinkies -->
+                <div class="blinkie-placeholder">I ❤️ Mermaids</div>
+                <div class="blinkie-placeholder">100% Angel</div>
+            </aside>
+
+            <!-- Main Content Area -->
+            <main class="content-area">
+
+                <!-- PAGE 1: Welcome / About -->
+                <section id="welcome" class="page-section">
+                    <h2>~*~ Hello, I'm Laguna gal! ~*~</h2>
+                    <p>Everything here is handmade, sparkly, and made for the sea. Grab your lip gloss and let's make some magic.</p>
+                    <div class="center-btn">
+                        <a href="#custom" class="action-btn">Design Your Dream Bra 💖</a>
+                    </div>
+                </section>
+
+                <!-- PAGE 2: Catalog -->
+                <section id="catalog" class="page-section">
+                    <h2>~*~ Catalog ~*~</h2>
+                    
+                    <div class="catalog-photo-board" id="catalog-photos" data-photo-folder="catalog-photos/">
+                        <div class="photo-fallback">
+                            <div class="photo-placeholder photo-one"></div>
+                            <div class="photo-placeholder photo-two"></div>
+                            <div class="photo-placeholder photo-three"></div>
+                            <div class="photo-placeholder photo-four"></div>
+                            <div class="photo-placeholder photo-five"></div>
+                            <div class="photo-placeholder photo-six"></div>
+                            <div class="photo-placeholder photo-seven"></div>
+                        </div>
+                    </div>
+
+                    <div class="center-btn catalog-link">
+                        <a href="https://www.instagram.com/lagunagall/" class="action-btn instagram-btn" target="_blank" rel="noopener">Instagram</a>
+                    </div>
+                </section>
+
+                <!-- PAGE 3: Custom Submission Wizard -->
+                <section id="custom" class="page-section">
+                    <h2>~*~ Custom Bra Wizard ~*~</h2>
+                    
+                    <form class="retro-form" action="https://formspree.io/f/xgojeble" method="POST">
+                        <input type="hidden" name="_subject" value="New Laguna gal custom order">
+
+                        <label for="customer-name">Name:</label>
+                        <input id="customer-name" type="text" name="name" placeholder="mermaid" required>
+
+                        <label for="customer-email">Email:</label>
+                        <input id="customer-email" type="email" name="email" placeholder="mermaid@example.com" required>
+
+                        <label for="customer-instagram">Insta:</label>
+                        <input id="customer-instagram" type="text" name="instagram" placeholder="xX_mermaid_Xx">
+                        
+                        <label for="bra-size">Bra Size:</label>
+                        <select id="bra-size" name="bra-size" required>
+                            <option value="">Choose your shell size...</option>
+                            <option value="A Cup">A Cup</option>
+                            <option value="B Cup">B Cup</option>
+                            <option value="C Cup">C Cup</option>
+                            <option value="D+ Cup">D+ Cup</option>
+                        </select>
+
+                        <label>Select your style:</label>
+                        <div class="checkboxes">
+                            <label><input type="checkbox" name="style" value="Shells"> 🐚 Shells</label>
+                            <label><input type="checkbox" name="style" value="Rhinestones"> ✨ Rhinestones</label>
+                            <label><input type="checkbox" name="style" value="Ribbons"> 🎀 Ribbons</label>
+                            <label><input type="checkbox" name="style" value="Hibiscus Print"> 🌸 Hibiscus Print</label>
+                        </div>
+
+                        <label for="order-notes">Custom details:</label>
+                        <textarea id="order-notes" name="message" placeholder="Colors, theme, inspo, deadline..." required></textarea>
+                        
+                        <button type="submit" class="action-btn">Send to Lagunagal</button>
+                    </form>
+                </section>
+
+            </main>
+        </div>
+    </div>
+
+</body>
+</html>
