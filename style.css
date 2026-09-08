@@ -138,27 +138,6 @@ h2 {
     padding-bottom: 5px;
 }
 
-.event-announcement {
-    background-color: var(--light-teal);
-    border: 3px dashed var(--hot-pink);
-    box-shadow: 3px 3px 0 var(--purple);
-    margin: 18px auto;
-    max-width: 300px;
-    padding: 10px;
-    text-align: center;
-}
-
-.event-announcement h3 {
-    color: var(--purple);
-    margin: 0 0 6px;
-}
-
-.event-announcement p {
-    font-weight: bold;
-    line-height: 1.45;
-    margin: 0;
-}
-
 /* --- BUTTONS --- */
 .center-btn {
     text-align: center;
@@ -223,22 +202,23 @@ h2 {
 
 .catalog-photo-frame img {
     display: block;
-    width: min(150px, 38vw);
-    height: 210px;
-    object-fit: contain;
+    width: auto;
+    max-width: var(--photo-width, 170px);
+    max-height: 255px;
+    height: auto;
 }
 
 .catalog-photo-frame.wide img {
-    width: min(150px, 38vw);
+    max-width: var(--photo-width, 210px);
 }
 
 .catalog-photo-frame.tall img {
-    width: min(150px, 38vw);
-    height: 210px;
+    max-width: var(--photo-width, 135px);
+    max-height: 285px;
 }
 
 .catalog-photo-frame.square img {
-    width: min(150px, 38vw);
+    max-width: var(--photo-width, 165px);
 }
 
 .photo-placeholder {
@@ -490,8 +470,8 @@ h2 {
     .catalog-photo-frame.wide img,
     .catalog-photo-frame.tall img,
     .catalog-photo-frame.square img {
-        width: min(150px, 38vw);
-        height: 210px;
+        max-width: min(var(--photo-width, 150px), 42vw);
+        max-height: 240px;
     }
 
     .shop-grid {
