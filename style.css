@@ -311,6 +311,79 @@ h2 {
     color: var(--white);
 }
 
+/* --- SHOP --- */
+.shop-intro,
+.checkout-note {
+    background-color: var(--bg-pink);
+    border: 2px dashed var(--teal);
+    padding: 10px;
+    text-align: center;
+}
+
+.shop-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 20px;
+}
+
+.shop-card {
+    background-color: var(--bg-pink);
+    border: 2px solid var(--teal);
+    box-shadow: 3px 3px 0 var(--hot-pink);
+    padding: 12px;
+    text-align: center;
+}
+
+.shop-card:nth-child(2) {
+    box-shadow: 3px 3px 0 var(--purple);
+}
+
+.shop-card h3 {
+    color: var(--purple);
+    margin: 12px 0 8px;
+    border-bottom: 1px dotted var(--hot-pink);
+    padding-bottom: 5px;
+    font-size: 1.1rem;
+}
+
+.shop-card p {
+    font-size: 0.92rem;
+    line-height: 1.35;
+}
+
+.shop-photo-frame {
+    background-color: var(--white);
+    border: 2px dashed var(--purple);
+    padding: 6px;
+}
+
+.shop-photo-frame img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.shop-sizes {
+    background-color: var(--white);
+    border: 1px solid var(--light-pink);
+    color: var(--hot-pink);
+    font-weight: bold;
+    padding: 6px;
+}
+
+.buy-btn {
+    width: calc(100% - 46px);
+    margin-top: 8px;
+}
+
+.checkout-note {
+    margin-top: 22px;
+    font-size: 0.9rem;
+}
+
 /* --- CUSTOM FORM --- */
 .retro-form {
     background-color: var(--bg-pink);
@@ -399,5 +472,13 @@ h2 {
     .catalog-photo-frame.square img {
         max-width: min(var(--photo-width, 150px), 42vw);
         max-height: 240px;
+    }
+
+    .shop-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .shop-photo-frame img {
+        max-height: 420px;
     }
 }

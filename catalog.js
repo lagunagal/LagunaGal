@@ -125,3 +125,12 @@ async function refreshCatalog() {
 
 refreshCatalog();
 setInterval(refreshCatalog, 10000);
+
+document.querySelectorAll(".buy-btn").forEach((button) => {
+    button.addEventListener("click", (event) => {
+        if (button.href.includes("REPLACE_WITH_")) {
+            event.preventDefault();
+            alert("Checkout is almost ready! Please check back soon or message Laguna gal on Instagram.");
+        }
+    });
+});
